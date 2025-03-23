@@ -1,9 +1,17 @@
-# Connect points to form triangles.
-#
-# This is a function that forms three 3 triangles
-# by connecting any five (5) points in a 2D plane
-# following the cartesian coordinates system
-
+#' Connect 5 points to form 3 triangles
+#'
+#' This function that creates three 3 triangles
+#' by connecting any five (5) points in a 2D plane
+#' following the cartesian coordinates system
+#'
+#' @param points a 5x2 matrix containing 5 points
+#'
+#' @returns A list containing points (vertices) and edges of triangles
+#' @export
+#'
+#' @examples
+#' points <- matrix(c(0,0,1,1,2,0,3,1,4,0), nrow=5, byrow=T)
+#' triangulate(points)
 triangulate <- function(points){
   # Make sure points contain exactly five (5) rows and
   # two (2) columns
@@ -23,3 +31,5 @@ triangulate <- function(points){
   return(list(points = points, edges = edges))
 
 }
+
+
