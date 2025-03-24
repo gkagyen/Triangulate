@@ -7,17 +7,21 @@
 triangulate(points)
 }
 \arguments{
-\item{points}{a 5x2 matrix containing 5 points}
+\item{points}{a 5x2 numeric matrix where each row represent a point
+with x, y coordinates}
 }
 \value{
 A list containing points (vertices) and edges of triangles
 }
 \description{
-This function that creates three 3 triangles
-by connecting any five (5) points in a 2D plane
-following the cartesian coordinates system
+This function creates three 3 triangles by connecting
+five (5) points in a fixed pattern: 1-2-3, 2-4-5 and 3-5-2
+}
+\details{
+The function assumes that the 5 points are not collinear. If points are
+ collinear the triangulation is still valid but may not be 'geometric'
 }
 \examples{
-points <- matrix(c(0,0,1,1,2,0,3,1,4,0), nrow=5, byrow=T)
+points <- matrix(c(0,0,1,1,2,0,3,1,4,0), nrow=5, byrow=TRUE)
 triangulate(points)
 }

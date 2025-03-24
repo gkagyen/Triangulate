@@ -1,19 +1,20 @@
-Package: Triangulate
 Type: Package
-Title: Create Triangles From Points 
+Package: Triangulate
+Title: Create Triangles From Points
 Version: 0.1.0
-Authors@R: c(
-    person(
-      "George", "K. Agyen",
-      email = "gkagyen@live.com",
-      role = c("aut", "cre")
-    )
-  )
-Description: This package contains functions that generates lines (edges) 
-    to connect points to form triangles. There are two functions in the package, one 
-    to generate the connecting edges of the triangles (as a list) and another to visualise 
-    the triangles. 
+Authors@R: 
+    person("George", "K. Agyen", , "gkagyen@live.com", role = c("aut", "cre"))
+Description: This package contains functions that generates lines (edges)
+    to connect points to form triangles. There are two functions in the
+    package, one to generate the connecting edges of the triangles (as a
+    list) and another to visualise the triangles.
 License: MIT + file LICENSE
+Imports: 
+    dplyr,
+    ggplot2,
+    tibble
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.2
+Depends: 
+    R (>= 3.5)
