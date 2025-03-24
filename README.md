@@ -23,10 +23,11 @@ pak::pak("gkagyen/Triangulate")
 ## Features
 
 **`triangulate()`**: This function connects five points (given a 5x2
-matrix) into three triangles returning a list with the points and edges
-**`plot_triangles()`**: This function helps to visualise the
-triangulation using `ggplot2`, labelling points with their respective
-coordinates **Example datasets**: Two built-in 5x2 matrices
+matrix) into three triangles returning a list with the points and edges.
+`triangulate()` connects the five points using a fixed pattern: 1-2-3,
+2-4-5, 3-5-2 **`plot_triangles()`**: This function helps to visualise
+the triangulation using `ggplot2`, labelling points with their
+respective coordinates **Example datasets**: Two built-in 5x2 matrices
 (`sample_data1` and `sample_data2`) for demonstration
 
 ## Example Usage
