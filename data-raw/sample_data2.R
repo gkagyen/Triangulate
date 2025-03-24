@@ -1,7 +1,7 @@
 # Randomly generated data to be used as sample data
 # for triangulate() and plot_triangle() functions
 
-set.seed(144) # For reproducibility
+set.seed(169) # For reproducibility
 
 # Generate points with some clustering
 sample_data2 <- matrix(c(runif(5, -10, 10),

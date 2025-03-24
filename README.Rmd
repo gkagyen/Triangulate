@@ -1,0 +1,64 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# Triangulate
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+This is a small R package that provides functions for triangulating five points into three triangles. It includes a triangulation function, a plotting utility and example datasets
+
+## Installation
+
+You can install the development version of Triangulate from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("pak")
+pak::pak("gkagyen/Triangulate")
+```
+## Features
+**`triangulate()`**: This function connects five points (given a 5x2 matrix) into three triangles returning a list with the points and edges
+**`plot_triangles()`**: This function helps to visualise the triangulation using `ggplot2`, labelling points with their respective coordinates
+**Example datasets**: Two built-in 5x2 matrices (`sample_data1` and `sample_data2`) for demonstration
+
+## Example Usage
+
+Here is a quick example to triangulate and plot five points
+
+```{r example}
+library(Triangulate)
+
+# create a 5x2 matrix of points
+points <- matrix(c(0,0,1,1,2,0,3,1,4,0), nrow = 5, byrow = TRUE)
+
+# apply triangulation
+tri_obj <- triangulate(points)
+
+# visualise triangulation
+tri_show <- plot_triangles(tri_obj)
+print(tri_show)
+```
+
+### Using In-Built Datasets
+```{r}
+sample_data1
+plot_triangles(triangulate(sample_data1))
+
+sample_data2
+plot_triangles(triangulate(sample_data2))
+```
+
+## Motivations
+This package was developed as part of the ***Google Summer of Code 2025*** application under the R projects' **"Create an R Code only version of the `tripack` functions"** project
